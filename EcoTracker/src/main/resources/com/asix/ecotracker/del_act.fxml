@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" spacing="20" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.asix.ecotracker.HelloController">
+   <children>
+      <!-- Title -->
+      <Text fill="#2e86c1" text="Delete Activity">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+
+      <!-- Table showing sustainability activities -->
+      <TableView fx:id="del_act_table" style="-fx-base: #ebf5fb; -fx-control-inner-background: #ebf5fb;">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="50" text="ID">
+               <cellValueFactory><PropertyValueFactory property="id" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="nombreColumn" prefWidth="150" text="Name">
+               <cellValueFactory><PropertyValueFactory property="nombre" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="fechaColumn" prefWidth="120" text="Date">
+               <cellValueFactory><PropertyValueFactory property="fecha" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="categoriaColumn" prefWidth="120" text="Category">
+               <cellValueFactory><PropertyValueFactory property="categoriaNombre" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="kmColumn" prefWidth="80" text="KM">
+               <cellValueFactory><PropertyValueFactory property="km" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="kgColumn" prefWidth="80" text="KG">
+               <cellValueFactory><PropertyValueFactory property="kg" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="horesColumn" prefWidth="100" text="Hores">
+               <cellValueFactory><PropertyValueFactory property="llumsHoraEstimada" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="horesColumn1" prefWidth="100" text="Hores">
+               <cellValueFactory>
+                  <PropertyValueFactory property="llumsHoraEstimada" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="co2Column" prefWidth="100" text="CO2 Total">
+               <cellValueFactory>
+                  <PropertyValueFactory property="co2Total" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+
+      <!-- Delete controls -->
+      <HBox alignment="CENTER" spacing="10">
+         <Label style="-fx-font-weight: bold; -fx-font-size: 14;" text="ID a esborrar" />
+         <ChoiceBox fx:id="del_act_choice_box" prefWidth="100" />
+         <Button fx:id="del_act_del_btn" onAction="#DelAct" style="-fx-base: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;" text="Delete" />
+         <Button fx:id="del_act_menu_btn" mnemonicParsing="false" onAction="#sceneBuild" text="Menu" />
+      </HBox>
+   </children>
+</VBox>

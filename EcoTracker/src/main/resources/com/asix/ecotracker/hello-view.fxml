@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.asix.ecotracker.HelloController">
+   <children>
+      <Button fx:id="co2_chart_home_btn" layoutX="259.0" layoutY="144.0" mnemonicParsing="false" onAction="#sceneBuild" text="CO2 chart" />
+      <Button fx:id="activity_display_home_btn" layoutX="245.0" layoutY="188.0" mnemonicParsing="false" onAction="#sceneBuild" text="Activity Display" />
+      <Button fx:id="activities_home_btn" layoutX="261.0" layoutY="232.0" mnemonicParsing="false" onAction="#sceneBuild" text="Activities" />
+      <Button fx:id="home_exit_btn" layoutX="276.0" layoutY="279.0" mnemonicParsing="false" onAction="#sceneBuild" text="Exit" />
+      <Label layoutX="116.0" layoutY="14.0" text="ECHO TRACKER">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
